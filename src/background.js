@@ -4,8 +4,12 @@ chrome.runtime.onInstalled.addListener(() => {
 
 addEventListener('activate', () => {
     console.log('activated!');
-    chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+});
+
+chrome.runtime.onConnect.addListener(function(port) {
+    console.log('connected!');
+    port.onMessage.addListener(function(message) {
         console.log(message);
-        sendResponse({ message: 'Received response from background service worker!' });
+        port.postMessage({message: 'Received response from background service worker!'});
     });
 });

@@ -1,11 +1,6 @@
-async function start() {
-    try {
-        const response = await chrome.runtime.sendMessage({greeting: "hello"});
-        console.log(response);
-        alert(response.message);
-    } catch (error) {
-        alert(error);
-    }
-}
-
-start();
+var port = chrome.runtime.connect({name: "test"});
+port.onMessage.addListener(function(message) {
+    console.log(message);
+    alert(message.message);
+});
+port.postMessage({greeting: "hello"});
