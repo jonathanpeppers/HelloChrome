@@ -1,1 +1,7 @@
-console.log("This is a popup!")
+try {
+    chrome.runtime.sendMessage({ greeting: "hello" }, function (response) {
+        console.log(response);
+    });
+} catch (error) {
+    alert(error);
+}
