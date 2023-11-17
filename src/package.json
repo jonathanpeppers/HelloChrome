@@ -1,0 +1,14 @@
+{
+  "name": "hellochrome",
+  "version": "1.0.0",
+  "description": "Hello World Chrome",
+  "main": "popup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan Peppers",
+  "license": "MIT",
+  "dependencies": {
+    "chrome-types": "^0.1.246"
+  }
+}
