@@ -1,8 +1,11 @@
-try {
-    chrome.runtime.sendMessage({ greeting: "hello" }, function (response) {
+async function start() {
+    try {
+        const response = await chrome.runtime.sendMessage({greeting: "hello"});
         console.log(response);
-        alert('Received response from background service worker!');
-    });
-} catch (error) {
-    alert(error);
+        alert(response.message);
+    } catch (error) {
+        alert(error);
+    }
 }
+
+start();

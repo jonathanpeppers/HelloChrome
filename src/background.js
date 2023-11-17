@@ -4,8 +4,8 @@ chrome.runtime.onInstalled.addListener(() => {
 
 addEventListener('activate', () => {
     console.log('activated!');
-    chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
         console.log(message);
-        sendResponse();
+        sendResponse({ message: 'Received response from background service worker!' });
     });
 });
