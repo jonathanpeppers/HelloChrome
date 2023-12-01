@@ -1,4 +1,4 @@
-var port = chrome.runtime.connect({name: "test"});
+var port = chrome.runtime.connect({name: "popup"});
 port.onMessage.addListener(function(message) {
     console.log(message);
     alert(message.message);

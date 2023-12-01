@@ -10,5 +10,10 @@
     },
     "background": {
         "service_worker": "background.js"
-    }
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["document_start.js"],
+        "run_at": "document_start"
+    }]
 }
