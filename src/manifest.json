@@ -1,12 +1,12 @@
 {
     "manifest_version": 3,
     "author": "Jonathan Peppers",
-    "name": "Hello Extension",
-    "description": "Hello World Extension",
+    "name": "Merlinbot Extension",
+    "description": "Merlinbot Extension for Azure DevOps",
     "version": "1.0",
     "action": {
-        "default_popup": "hello.html",
-        "default_icon": "hello.png"
+        "default_popup": "merlinbot.html",
+        "default_icon": "merlinbot.png"
     },
     "background": {
         "service_worker": "background.js"
